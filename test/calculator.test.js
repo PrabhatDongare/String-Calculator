@@ -16,7 +16,7 @@ test('Need to return the sum of two numbers', () => {
 
 test('Need to return the sum of multiple numbers', () => {
     expect(add("1,2,3")).toBe(6);
-    expect(add("4,5,6,7")).toBe(22);
+    expect(add("4,5,6,7")).toBe(22);    
 });
 
 test('Need to handle new lines between numbers', () => {
@@ -24,4 +24,9 @@ test('Need to handle new lines between numbers', () => {
     expect(add("1\n2\n3")).toBe(6);
     expect(add("1\n2,3")).toBe(6);
     expect(add("1\n2\n3,4")).toBe(10);
+});
+
+test('Need to support different delimiters', () => {
+    expect(add("//;\n1;2")).toBe(3);
+    expect(add("//$\n1$2$3")).toBe(6);
 });
