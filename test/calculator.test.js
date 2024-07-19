@@ -9,3 +9,8 @@ test('Need to return the number itself for a single number', () => {
     expect(add("5")).toBe(5);
 });
 
+test('should return the sum of two numbers', () => {
+    expect(add("1,2")).toBe(3);
+    expect(add("1,5")).toBe(6);
+});
+
